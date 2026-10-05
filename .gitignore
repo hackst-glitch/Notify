@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native builds
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro log
+.metro-health-check*
+
+# OS files
+.DS_Store
+Thumbs.db

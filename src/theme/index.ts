@@ -1,16 +1,56 @@
-// Design system constants, colors, typography, and spacing
-export const theme = {
-  colors: {
-    primary: '#007AFF',
-    background: '#FFFFFF',
-    text: '#000000',
-    secondaryText: '#8E8E93',
-  },
-  spacing: {
-    xs: 4,
-    sm: 8,
-    md: 16,
-    lg: 24,
-    xl: 32,
-  },
+import { lightColors, darkColors, statusColors, notificationLevels, ThemeColors } from './colors';
+import { typography, Typography } from './typography';
+import { spacing, touchTargets, Spacing, TouchTargets } from './spacing';
+import { radii, Radii } from './radii';
+import { motion, Motion } from './motion';
+
+export interface Theme {
+  colors: ThemeColors;
+  statusColors: typeof statusColors;
+  notificationLevels: typeof notificationLevels;
+  typography: Typography;
+  spacing: Spacing;
+  touchTargets: TouchTargets;
+  radii: Radii;
+  motion: Motion;
+  isDark: boolean;
+}
+
+export const lightTheme: Theme = {
+  colors: lightColors,
+  statusColors,
+  notificationLevels,
+  typography,
+  spacing,
+  touchTargets,
+  radii,
+  motion,
+  isDark: false,
+};
+
+export const darkTheme: Theme = {
+  colors: darkColors,
+  statusColors,
+  notificationLevels,
+  typography,
+  spacing,
+  touchTargets,
+  radii,
+  motion,
+  isDark: true,
+};
+
+// Dark mode is default
+export const defaultTheme = darkTheme;
+
+export {
+  lightColors,
+  darkColors,
+  statusColors,
+  notificationLevels,
+  typography,
+  spacing,
+  touchTargets,
+  radii,
+  motion,
 };
